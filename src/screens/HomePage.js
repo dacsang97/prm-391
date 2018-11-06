@@ -1,4 +1,6 @@
 import React from 'react'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Ionicons } from '@expo/vector-icons'
 import { View, Text, StyleSheet } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -83,6 +85,25 @@ const styles = StyleSheet.create({
   pinned: {
     color: 'grey',
   },
+  balance: {
+    color: '#9e9e9e',
+  },
+  footer: {
+    marginBottom: -10,
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+  },
+  search: {
+    marginLeft: 10,
+  },
+  footerRight: {
+    flexDirection: 'row',
+  },
+  finger: {
+    marginRight: 10,
+    marginLeft: 20,
+  },
 })
 export default () => (
   <View style={styles.screen}>
@@ -117,11 +138,20 @@ export default () => (
         <Text style={styles.number}>$ 66888.66</Text>
       </View>
       <View>
-        <Text>BALANCE</Text>
+        <Text style={styles.balance}>BALANCE</Text>
       </View>
     </View>
     <View style={styles.printed}>
       <Text style={styles.pinned}>PINNED</Text>
+    </View>
+    <View style={styles.footer}>
+      <View style={styles.search}>
+        <Ionicons name="ios-search" size={32} color="#9e9e9e" />
+      </View>
+      <View style={styles.footerRight}>
+        <Ionicons name="md-more" size={32} color="#9e9e9e" />
+        <Ionicons name="ios-finger-print-outline" size={32} color="#d84315" style={styles.finger} />
+      </View>
     </View>
   </View>
 )

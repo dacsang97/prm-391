@@ -12,5 +12,12 @@ export default ({ navigation }) => (
     >
       <Text>Go to Test Screen</Text>
     </RectButton>
+    <RectButton
+      onPress={() => {
+        navigation.navigate('HomePage')
+      }}
+    >
+      <Text>Go to HomePage</Text>
+    </RectButton>
   </View>
 )

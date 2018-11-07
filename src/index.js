@@ -14,7 +14,6 @@ export default createStackNavigator(
     },
   },
   {
-    mode: 'modal',
     headerMode: 'none',
   },
 )

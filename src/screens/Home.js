@@ -1,8 +1,9 @@
 import React, { PureComponent } from 'react'
-import { View, Text, StyleSheet } from 'react-native'
+import { View, StyleSheet } from 'react-native'
 import { Ionicons } from '@expo/vector-icons'
 import { RectButton, ScrollView } from 'react-native-gesture-handler'
 import { BLACK_DARKER } from '../constants/colors'
+import { Text } from '../components/atoms'
 
 const styles = StyleSheet.create({
   container: {
@@ -17,14 +18,12 @@ class Home extends PureComponent {
     this.handleScroll = this.handleScroll.bind(this)
   }
 
-  handleScroll({ nativeEvent }) {
+  handleScroll = ({ nativeEvent }) => {
     const { navigation } = this.props
     const {
       contentOffset: { y },
     } = nativeEvent
-    if (y > 50) {
-      navigation.navigate('Test')
-    } else if (y < -50) {
+    if (y > 80 || y < -80) {
       navigation.navigate('Test')
     }
   }
@@ -32,18 +31,10 @@ class Home extends PureComponent {
   render() {
     const { navigation } = this.props
     return (
-      <ScrollView
-        style={styles.container}
-        onScrollBeginDrag={() => {
-          console.log('xxx')
-        }}
-        onScrollEndDrag={() => {
-          console.log('yyy')
-        }}
-        onScroll={this.handleScroll}
-        scrollEventThrottle={16}
-      >
-        <Text>Home Screen</Text>
+      <ScrollView style={styles.container} onScroll={this.handleScroll} scrollEventThrottle={16}>
+        <Text style={{ fontSize: 26 }} medium color="red">
+          Home Screen
+        </Text>
         <RectButton
           onPress={() => {
             navigation.navigate('Test')
@@ -51,7 +42,7 @@ class Home extends PureComponent {
         >
           <View>
             <Ionicons name="ios-microphone" />
-            <Text>Go to Test Screen</Text>
+            <Text weight="medium">Go to Test Screen</Text>
           </View>
         </RectButton>
       </ScrollView>

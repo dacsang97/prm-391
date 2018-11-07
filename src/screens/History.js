@@ -1,4 +1,6 @@
 import React, { Component } from 'react'
+// eslint-disable-next-line import/no-extraneous-dependencies
+import { Ionicons } from '@expo/vector-icons'
 import { TextInput, View, StyleSheet, Text } from 'react-native'
 
 const styles = StyleSheet.create({
@@ -17,6 +19,7 @@ const styles = StyleSheet.create({
     backgroundColor: '#212121',
     height: 30,
     paddingLeft: 10,
+    color: 'white',
   },
   checkHistory: {
     flex: 1,
@@ -25,7 +28,7 @@ const styles = StyleSheet.create({
     marginLeft: 15,
     marginRight: 15,
     marginTop: 15,
-    marginBottom: 15,
+    marginBottom: -10,
   },
   rightHistory: {
     alignItems: 'flex-end',
@@ -41,6 +44,33 @@ const styles = StyleSheet.create({
   },
   years: {
     color: '#9e9e9e',
+  },
+  cash: {
+    flex: 1,
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    borderRadius: 10,
+    borderWidth: 0.5,
+    borderColor: '#212121',
+    backgroundColor: '#212121',
+    height: 50,
+    alignItems: 'center',
+    marginLeft: 10,
+    marginRight: 10,
+  },
+  dateContent: {
+    flex: 8,
+  },
+  childCash: {
+    alignItems: 'flex-end',
+    marginRight: 10,
+  },
+  moneyCash: {
+    color: '#e0e0e0',
+    fontSize: 20,
+  },
+  titleCash: {
+    color: '#e0e0e0',
   },
 })
 export default class History extends Component {
@@ -71,6 +101,18 @@ export default class History extends Component {
             <Text style={styles.month}>NOVEMBER</Text>
             <Text style={styles.years}>2018</Text>
           </View>
+        </View>
+        <View style={styles.cash}>
+          <View>
+            <Ionicons name="md-search" size={32} color="#9e9e9e" />
+          </View>
+          <View style={styles.childCash}>
+            <Text style={styles.moneyCash}>$ 66888.666</Text>
+            <Text style={styles.titleCash}>CASH</Text>
+          </View>
+        </View>
+        <View style={styles.dateContent}>
+          <Text>xx</Text>
         </View>
       </View>
     )

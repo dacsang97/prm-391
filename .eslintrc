@@ -2,6 +2,7 @@
   "extends": ["airbnb", "prettier", "prettier/react"],
   "rules": {
     "import/no-unresolved": 0,
+    "class-methods-use-this": 0,
     "react/prop-types": ["error", { "ignore": ["navigation"] }],
     "react/jsx-filename-extension": [
       1,
@@ -9,14 +10,7 @@
         "extensions": [".js", ".jsx"]
       }
     ],
-    "prettier/prettier": [
-      "error",
-      {
-        "trailingComma": "es5",
-        "singleQuote": true,
-        "printWidth": 100
-      }
-    ]
+    "prettier/prettier": ["error"]
   },
   "plugins": ["prettier"]
 }

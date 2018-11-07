@@ -2,7 +2,7 @@ import React from 'react'
 import { View, Text } from 'react-native'
 import { RectButton } from 'react-native-gesture-handler'
 
-export default ({ navigation }) => (
+const Home = ({ navigation }) => (
   <View>
     <Text>Home Screen</Text>
     <RectButton
@@ -21,3 +21,5 @@ export default ({ navigation }) => (
     </RectButton>
   </View>
 )
+
+export default Home

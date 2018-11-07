@@ -9,8 +9,8 @@ const styles = StyleSheet.create({
     backgroundColor: '#37474f',
   },
   allSearch: {
-    marginLeft: 10,
-    marginRight: 10,
+    marginLeft: 5,
+    marginRight: 5,
   },
   textSearch: {
     borderRadius: 50,
@@ -25,8 +25,8 @@ const styles = StyleSheet.create({
     flex: 1,
     flexDirection: 'row',
     justifyContent: 'space-between',
-    marginLeft: 15,
-    marginRight: 15,
+    marginLeft: 10,
+    marginRight: 10,
     marginTop: 15,
     marginBottom: -10,
   },
@@ -55,11 +55,12 @@ const styles = StyleSheet.create({
     backgroundColor: '#212121',
     height: 50,
     alignItems: 'center',
-    marginLeft: 10,
-    marginRight: 10,
+    marginLeft: 5,
+    marginRight: 5,
   },
   dateContent: {
     flex: 8,
+    marginLeft: 5,
   },
   childCash: {
     alignItems: 'flex-end',
@@ -71,6 +72,20 @@ const styles = StyleSheet.create({
   },
   titleCash: {
     color: '#e0e0e0',
+  },
+  iconMoney: {
+    marginLeft: 10,
+    marginTop: 10,
+  },
+  dateTextContent: {
+    color: '#9e9e9e',
+    fontSize: 12,
+    marginTop: 5,
+  },
+  iconLeft: {
+    flex: 1,
+    marginLeft: 5,
+    marginBottom: -20,
   },
 })
 export default class History extends Component {
@@ -103,7 +118,7 @@ export default class History extends Component {
           </View>
         </View>
         <View style={styles.cash}>
-          <View>
+          <View style={styles.iconMoney}>
             <Ionicons name="md-search" size={32} color="#9e9e9e" />
           </View>
           <View style={styles.childCash}>
@@ -112,7 +127,10 @@ export default class History extends Component {
           </View>
         </View>
         <View style={styles.dateContent}>
-          <Text>xx</Text>
+          <Text style={styles.dateTextContent}>Saturday, November 3, 2018</Text>
+        </View>
+        <View style={styles.iconLeft}>
+          <Ionicons name="ios-arrow-dropleft-circle" size={32} color="#9e9e9e" />
         </View>
       </View>
     )

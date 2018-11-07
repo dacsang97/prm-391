@@ -32,7 +32,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 0.5,
     borderColor: '#212121',
-    width: '45%',
+    width: '47%',
     height: 50,
     alignItems: 'flex-end',
     justifyContent: 'center',
@@ -44,7 +44,7 @@ const styles = StyleSheet.create({
     borderRadius: 10,
     borderWidth: 0.5,
     borderColor: '#212121',
-    width: '45%',
+    width: '47%',
     height: 50,
     alignItems: 'flex-end',
     justifyContent: 'center',
@@ -150,7 +150,7 @@ export default () => (
       </View>
       <View style={styles.footerRight}>
         <Ionicons name="md-more" size={32} color="#9e9e9e" />
-        <Ionicons name="ios-finger-print-outline" size={32} color="#d84315" style={styles.finger} />
+        <Ionicons name="ios-finger-print" size={32} color="#d84315" style={styles.finger} />
       </View>
     </View>
   </View>

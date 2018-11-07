@@ -1,7 +1,7 @@
-import React from 'react'
-import { StyleSheet, Text, View } from 'react-native'
+// import React from 'react'
 import { createStackNavigator } from 'react-navigation'
-import { Home, Test, HomePage } from './screens'
+// eslint-disable-next-line import/named
+import { Home, Test, HomePage, History } from './screens'
 
 export default createStackNavigator({
   Home: {
@@ -15,5 +15,8 @@ export default createStackNavigator({
   },
   HomePage: {
     screen: HomePage,
+  },
+  History: {
+    screen: History,
   },
 })

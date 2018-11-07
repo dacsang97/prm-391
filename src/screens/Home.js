@@ -19,5 +19,12 @@ export default ({ navigation }) => (
     >
       <Text>Go to HomePage</Text>
     </RectButton>
+    <RectButton
+      onPress={() => {
+        navigation.navigate('History')
+      }}
+    >
+      <Text>Go to History</Text>
+    </RectButton>
   </View>
 )

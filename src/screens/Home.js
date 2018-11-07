@@ -12,5 +12,12 @@ export default ({ navigation }) => (
     >
       <Text>Go to Test Screen</Text>
     </RectButton>
+    <RectButton
+      onPress={() => {
+        navigation.navigate('AddSubMoney', { isSub: false })
+      }}
+    >
+      <Text>Go to Add Money Screen</Text>
+    </RectButton>
   </View>
 )

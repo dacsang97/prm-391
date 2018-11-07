@@ -1,5 +1,5 @@
 import { createStackNavigator } from 'react-navigation'
-import { Home, Test } from './screens'
+import { Home, Test, AddSubMoney } from './screens'
 
 export default createStackNavigator({
   Home: {
@@ -10,5 +10,8 @@ export default createStackNavigator({
   },
   Test: {
     screen: Test,
+  },
+  AddSubMoney: {
+    screen: AddSubMoney,
   },
 })

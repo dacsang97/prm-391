@@ -12,6 +12,20 @@ const Home = ({ navigation }) => (
     >
       <Text>Go to Test Screen</Text>
     </RectButton>
+    <RectButton
+      onPress={() => {
+        navigation.navigate('HomePage')
+      }}
+    >
+      <Text>Go to HomePage</Text>
+    </RectButton>
+    <RectButton
+      onPress={() => {
+        navigation.navigate('History')
+      }}
+    >
+      <Text>Go to History</Text>
+    </RectButton>
   </View>
 )
 
